@@ -51,7 +51,7 @@ var config = {
     		// Boolean to toggle welcomeMessage
     		welcomeMessage: true
     	}
-    }, 
+    },
 		{
 			module: "alert",
 		},
@@ -116,6 +116,10 @@ var config = {
 				showSourceTitle: true,
 				showPublishDate: true
 			}
+		},
+		{
+			module: "portugues/cumprimento",
+			position: "top_left"
 		},
 	]
 

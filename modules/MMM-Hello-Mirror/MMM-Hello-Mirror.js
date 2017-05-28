@@ -1,6 +1,6 @@
 /* Magic Mirror
  * Module: MMM-Hello-Mirror
- * 
+ *
  * By Mathias Kaniut
  * MIT Licensed
  */
@@ -9,9 +9,9 @@ Module.register("MMM-Hello-Mirror", {
 
 	// Default module config.
     defaults: {
-        language: "de",
-        voice: "Deutsch Female",
-        wakeUp: "Hallo (magischer) Spiegel",
+        language: "en",
+        voice: "US English Female",
+        wakeUp: "Hi (magic) mirror",
         animationSpeed: 2000,
         debug: true,
         broadcastEvents: true
@@ -38,7 +38,9 @@ Module.register("MMM-Hello-Mirror", {
 	getTranslations: function() {
         return {
             en: "translations/en.json",
-            de: "translations/de.json"
+            de: "translations/de.json",
+            pt: "translations/pt.json",
+            pt_br: "translations/pt_br.json",
 		};
 	},
 
@@ -58,13 +60,13 @@ Module.register("MMM-Hello-Mirror", {
 
 			// Set language for date object
 			moment.locale(this.config.language);
-			
+
 			// Set the debug mode
 			annyang.debug(this.config.debug);
-			
+
 			// Set the language of annyang
 			annyang.setLanguage(this.config.language);
-			
+
 			// Define the commands ...
             // ... for german language
             if (self.config.language == 'de') {
@@ -80,7 +82,7 @@ Module.register("MMM-Hello-Mirror", {
                     }
                 };
             // ... for other languages (should be english)
-            } else {
+          } else if (self.config.language == 'en') {
                 var commands = {
                     'Hi (magic) mirror *command': function(command) {
                         Log.info('Voice command recognized in module ' + self.name + ': ' + command);
@@ -93,11 +95,56 @@ Module.register("MMM-Hello-Mirror", {
                         }
                     }
                 };
-            }
+            } else if (self.config.language == 'pt_br') {
+                  var commands = {
+                      'Espelho (mágico) *command': function(command) {
+                          Log.info('Voice command recognized in module ' + self.name + ': ' + command);
+                          if (self.config.broadcastEvents) {
+                              self.sendNotification("VOICE_COMMAND", command);
+                          }
+                          if (responsiveVoice) {
+                              console.log("VOICE_ACCEPTED")
+                              // responsiveVoice.speak( self.translate("VOICE_ACCEPTED") );
+                          }
+                      },
+                      'Sim': function() {
+                          Log.info('Sim ' + self.name);
+                          if (self.config.broadcastEvents) {
+                              self.sendNotification("VOICE_COMMAND_YES", "Sim");
+                          }
+                          if (responsiveVoice) {
+                              console.log("VOICE_ACCEPTED_YES")
+                              responsiveVoice.speak( "Entendi, Sim" );
+                          }
+                      },
+                      'Não': function() {
+                          Log.info('Não ' + self.name);
+                          if (self.config.broadcastEvents) {
+                              self.sendNotification("VOICE_COMMAND_NO", "Não");
+                          }
+                          if (responsiveVoice) {
+                              console.log("VOICE_ACCEPTED_NO")
+                              // responsiveVoice.speak( self.translate("VOICE_ACCEPTED_NO") );
+                              responsiveVoice.speak( "Entendi, Não" );
+                          }
+                      },
+                      'Michael Douglas': function() {
+                          Log.info('Michael Douglas ' + self.name);
+                          if (self.config.broadcastEvents) {
+                              self.sendNotification("MICHAEL_DOUGLAS", "Nunca mais eu vou dormir!");
+                          }
+                          if (responsiveVoice) {
+                              console.log("MICHAEL_DOUGLAS")
+                              // responsiveVoice.speak( self.translate("VOICE_ACCEPTED_NO") );
+                              responsiveVoice.speak( "Qué isso? Nunca mais eu vou dormir! Nunca mais eu vou dormir!" );
+                          }
+                      }
+                  };
+              }
 
 			// Add the commands to annyang
-  			annyang.addCommands(commands);
-			
+  		annyang.addCommands(commands);
+
 			// Add callback functions for errors
 			annyang.addCallback('error', function() {
 				Log.error('ERROR in module ' + self.name + ': ' + 'Speech Recognition fails because an undefined error occured');
@@ -130,7 +177,7 @@ Module.register("MMM-Hello-Mirror", {
 			Log.error('ERROR in module ' + self.name + ': ' + 'Google Speech Recognizer is down :(');
 		}
 	},
-	
+
     // Override dom generator.
     getDom: function() {
         var wrapper = document.createElement("div");
