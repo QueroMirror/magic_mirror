@@ -42,6 +42,12 @@ Module.register("cumprimento",{
           responsiveVoice.speak( "Olá " + payload );
       }
     }
+
+    if (notification == "STRANGE_CAME") {
+      if (responsiveVoice) {
+          responsiveVoice.speak( "Olá visitante, bem vindo a quero");
+      }
+    }
   },
 
 
