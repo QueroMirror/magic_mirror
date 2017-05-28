@@ -137,7 +137,7 @@ Module.register("MMM-Hello-Mirror", {
                               console.log("VOICE_COMMAND_RICARDO")
                               responsiveVoice.speak( "Entendi, Ricardo" );
                           }
-                      }
+                      },
                       'Michael Douglas': function() {
                           Log.info('Michael Douglas ' + self.name);
                           if (self.config.broadcastEvents) {

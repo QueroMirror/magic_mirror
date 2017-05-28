@@ -117,7 +117,7 @@ var config = {
 				feeds: [
 					{
 						title: "QueroNews",
-						url: "http://www.queroacademy.com/Quero_News.xml"
+						url: "http://feeds.feedburner.com/queroacademy/WqdG"
 					}
 				],
 				showSourceTitle: true,
