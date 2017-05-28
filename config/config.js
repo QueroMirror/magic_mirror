@@ -88,23 +88,25 @@ var config = {
 
 		{
 			module: "currentweather",
-			position: "top_right",
+			position: "top_left",
       classes: "default everyone",
 			config: {
 				location: "Sao Jose",
 				locationID: "3448636",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "c3c41882d0bf0a81513e449b6712c778"
+				appid: "c3c41882d0bf0a81513e449b6712c778",
+        fetchInterval: 600000
 			}
 		},
 		{
 			module: "weatherforecast",
-			position: "top_right",
+			position: "top_left",
 			header: "Weather Forecast",
       classes: "default everyone",
 			config: {
 				location: "Sao Jose",
 				locationID: "3448636",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "c3c41882d0bf0a81513e449b6712c778"
+				appid: "c3c41882d0bf0a81513e449b6712c778",
+        fetchInterval: 600000
 			}
 		},
 		{
@@ -125,7 +127,6 @@ var config = {
 		{
 			module: "portugues/cumprimento",
 			classes: "default everyone",
-			position: "top_left"
 		},
 	]
 
