@@ -63,7 +63,7 @@ var config = {
 		},
 		{
 			module: "clock",
-			position: "top_right"
+			position: "top_right",
       classes: "default everyone",
 		},
 		{
@@ -93,7 +93,7 @@ var config = {
 			config: {
 				location: "Sao Jose",
 				locationID: "3448636",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				appid: "c3c41882d0bf0a81513e449b6712c778"
 			}
 		},
 		{
@@ -104,7 +104,7 @@ var config = {
 			config: {
 				location: "Sao Jose",
 				locationID: "3448636",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				appid: "c3c41882d0bf0a81513e449b6712c778"
 			}
 		},
 		{
