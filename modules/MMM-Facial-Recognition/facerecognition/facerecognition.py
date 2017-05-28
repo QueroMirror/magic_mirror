@@ -35,6 +35,11 @@ def to_node(type, message):
 
 to_node("status", "Facerecognition started...")
 
+pre_found_face = -1
+face_identified_count = 0
+face_not_identified_count = 0
+face_not_found_count = 0
+face_found_count = 0
 # Setup variables
 current_user = None
 last_match = None
@@ -104,17 +109,31 @@ while True:
         image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
         # Get coordinates of single face in captured image.
         result = face.detect_single(image)
+        # to_node("status", "result data: ")        
+        # to_node("status", result)
         # No face found, logout user?
         if result is None:
+            pre_found_face = -1
+            face_identified_count = 0
+            face_not_identified_count = 0
+            face_found_count = 0
+            face_not_found_count = face_not_found_count + 1
+            to_node("status", "NOT_FOUND: " + str(face_not_found_count) )
+            # 1 amostragem por segundo, 5 amostragens sem achar ninguem, desloga
+            if (current_user is not None and face_not_found_count > 4):
             # if last detection exceeds timeout and there is someone logged in -> logout!
-            if (current_user is not None and time.time() - login_timestamp > config.get("logoutDelay")):
+            # if (current_user is not None and time.time() - login_timestamp > config.get("logoutDelay")):
                 # callback logout to node helper
                 to_node("logout", {"user": current_user})
                 same_user_detected_in_row = 0
                 current_user = None
             continue
         # Set x,y coordinates, height and width from face detection result
+        to_node("status", "FOUND: " + str(face_found_count) )
+        face_not_found_count = 0
+        face_found_count = face_found_count + 1
         x, y, w, h = result
+        # to_node("status", "result x: " + str(x) + " y: " + str(y) + " w: " + str(w) + " h: " + str(h))
         # Crop image on face. If algorithm is not LBPH also resize because in all other algorithms image resolution has to be the same as training image resolution.
         if config.get("recognitionAlgorithm") == 1:
             crop = face.crop(image, x, y, w, h)
@@ -122,32 +141,60 @@ while True:
             crop = face.resize(face.crop(image, x, y, w, h))
         # Test face against model.
         label, confidence = model.predict(crop)
+        # to_node("status", "result label: " + str(label) + " confidence: " + str(confidence))
         # We have a match if the label is not "-1" which equals unknown because of exceeded threshold and is not "0" which are negtive training images (see training folder).
         if (label != -1 and label != 0):
-            # Set login time
-            login_timestamp = time.time()
-            # Routine to count how many times the same user is detected
-            if (label == last_match and same_user_detected_in_row < 2):
-                # if same user as last time increment same_user_detected_in_row +1
-                same_user_detected_in_row += 1
-            if label != last_match:
-                # if the user is diffrent reset same_user_detected_in_row back to 0
-                same_user_detected_in_row = 0
-            # A user only gets logged in if he is predicted twice in a row minimizing prediction errors.
-            if (label != current_user and same_user_detected_in_row > 1):
-                current_user = label
-                # Callback current user to node helper
-                to_node("login", {"user": label, "confidence": str(confidence)})
-            # set last_match to current prediction
-            last_match = label
+            face_not_identified_count = 0
+            face_identified_count = face_identified_count + 1
+            # LOGICA RUIM! NAO IDENTIFICA DIREITO!
+            # identificou, ja tinha login setado?
+            if (current_user is None):
+                # pode mandar login ja?
+                if face_identified_count > 1:
+                    if pre_found_face == label:    
+                        to_node("login", {"user": label, "confidence": str(confidence)})
+                        current_user = label
+            else:
+                # eh o mesmo usuario?
+                if current_user != label:
+                    to_node("status", "######## troca de user ############ label: " + str(label) + " current_user: " + str(current_user))
+            # # Set login time
+            # login_timestamp = time.time()
+            # # Routine to count how many times the same user is detected
+            # if (label == last_match and same_user_detected_in_row < 2):
+            #     # if same user as last time increment same_user_detected_in_row +1
+            #     same_user_detected_in_row += 1
+            # if label != last_match:
+            #     # if the user is diffrent reset same_user_detected_in_row back to 0
+            #     same_user_detected_in_row = 0
+            # # A user only gets logged in if he is predicted twice in a row minimizing prediction errors.
+            # if (label != current_user and same_user_detected_in_row > 1):
+            #     current_user = label
+            #     # Callback current user to node helper
+            #     to_node("login", {"user": label, "confidence": str(confidence)})
+            # # set last_match to current prediction
+            # last_match = label
+            pre_found_face = label
         # if label is -1 or 0, current_user is not already set to unknown and last prediction match was at least 5 seconds ago
         # (to prevent unknown detection of a known user if he moves for example and can't be detected correctly)
-        elif (current_user != 0 and time.time() - login_timestamp > 5):
-            # Set login time
-            login_timestamp = time.time()
-            # set current_user to unknown
-            current_user = 0
-            # callback to node helper
-            to_node("login", {"user": current_user, "confidence": None})
         else:
-            continue
+            face_identified_count = 0
+            face_not_identified_count = face_not_identified_count + 1
+            if current_user is None:
+                # ja tem estranho logado?
+                if face_not_identified_count > 3:
+                    current_user = 0
+                    to_node("login", {"user": 0, "confidence": None})
+            else:
+                # ja tem usuario logado, esta em tempo de deslogar ele?
+                if face_not_identified_count > 4:
+                    to_node("logout", {"user": current_user})
+                    current_user = None
+        # elif (current_user != 0 and time.time() - login_timestamp > 5):
+        #     # Set login time
+        #     login_timestamp = time.time()
+        #     # set current_user to unknown
+        #     current_user = 0
+        #     # callback to node helper
+        #     to_node("login", {"user": current_user, "confidence": None})
+        

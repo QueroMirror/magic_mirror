@@ -23,13 +23,13 @@ module.exports = NodeHelper.create({
       console.log("[" + self.name + "] ADD_USER after_size: " + self.config.users.length);
       }
       if (message.hasOwnProperty('login')){
-        if (message.login.confidence == null) {
-          console.log("[" + self.name + "] User with null confidente, no action")
-        } else {
+        //if (message.login.confidence == null) {
+//          console.log("[" + self.name + "] User with null confidente, no action")
+        //} else {
           console.log("[" + self.name + "] " + "User " + self.config.users[message.login.user - 1] + " with confidence " + message.login.confidence + " logged in.");
           self.sendSocketNotification('user', {action: "login", user: message.login.user - 1, confidence: message.login.confidence});
           
-        }
+        //}
       }
       if (message.hasOwnProperty('logout')){
         console.log("[" + self.name + "] " + "User " + self.config.users[message.logout.user - 1] + " logged out.");
