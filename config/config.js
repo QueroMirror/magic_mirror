@@ -54,20 +54,23 @@ var config = {
     },
 		{
 			module: "alert",
+      classes: "default everyone",
 		},
 		{
 			module: "updatenotification",
 			position: "top_bar"
+      classes: "default everyone",
 		},
 		{
 			module: "clock",
 			position: "top_right"
+      classes: "default everyone",
 		},
 		{
 			module: "calendar",
 			header: "Quero Calendar",
 			position: "top_right",
-    			classes: "default everyone",
+    	classes: "default everyone",
 			config: {
 				calendars: [
 					{
@@ -82,10 +85,11 @@ var config = {
 			module: "compliments",
 			position: "lower_third"
 		},*/
-/*
+
 		{
 			module: "currentweather",
 			position: "top_right",
+      classes: "default everyone",
 			config: {
 				location: "Sao Jose",
 				locationID: "3448636",  //ID from http://www.openweathermap.org/help/city_list.txt
@@ -96,12 +100,13 @@ var config = {
 			module: "weatherforecast",
 			position: "top_right",
 			header: "Weather Forecast",
+      classes: "default everyone",
 			config: {
 				location: "Sao Jose",
 				locationID: "3448636",  //ID from http://www.openweathermap.org/help/city_list.txt
 				appid: "YOUR_OPENWEATHER_API_KEY"
 			}
-		},*/
+		},
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
