@@ -65,10 +65,11 @@ Module.register("cumprimento",{
       }
     }
     if (this.state == 2) {
+      Log.info("NOTIFICATION ESTADOS 2");
       Log.info(this.name + " - received command");
       if (notification == "VOICE_COMMAND_YES") {
         Log.info(this.name + " - SIM, quer falar com alguem!");
-        responsiveVoice.speak( "Com quem você gostaria de falar.");
+        responsiveVoice.speak( "Com quem você gostaria de falar?");
         this.state = 3;
       }
       if (notification == "VOICE_COMMAND_NO") {
@@ -78,9 +79,10 @@ Module.register("cumprimento",{
       }
     }
     if (this.state == 2 || this.state == 3) {
-      Log.info("NOTIFICATION ESTADOS OU 3");
+      Log.info("NOTIFICATION ESTADOS 2 OU 3");
 
       if (notification == "VOICE_COMMAND_RICARDO") {
+        Log.info("NOTIFICATION CHAMAR RICARDO");
         responsiveVoice.speak( "Ok, vou procurar o Ricardo e avisar que você está aqui.");
         this.state = 0;
       }
