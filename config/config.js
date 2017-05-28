@@ -116,8 +116,8 @@ var config = {
 			config: {
 				feeds: [
 					{
-						title: "Reuters - WorldNews",
-						url: "http://feeds.reuters.com/Reuters/worldNews"
+						title: "QueroNews",
+						url: "http://www.queroacademy.com/Quero_News.xml"
 					}
 				],
 				showSourceTitle: true,

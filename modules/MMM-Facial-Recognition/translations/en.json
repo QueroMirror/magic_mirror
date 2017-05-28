@@ -1,8 +1,9 @@
 {
   "message": "Hello %person, nice to meet you!",
-  "title": "Facial-Recognition",
+  "title": "QueroMirror",
   "stranger": "stranger",
-  "hello_message_1": "Hello %person, nice to meet you!",
-  "hello_message_2": "Hello %person, it's great to have you here!",
-  "hello_message_3": "Hello %person, day got better now"
+  "hello_message_1": "Olá %person, que bom te encontrar novamente!",
+  "hello_message_2": "Olá %person, é demais ter você aqui!",
+  "hello_message_3": "Olá %person, nosso dia ficou melhro agora!",
+  "hello_guest_message": "Olá visitante. Seja bem vindo a QueroEducação"
 }

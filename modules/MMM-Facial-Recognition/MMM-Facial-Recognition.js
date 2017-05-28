@@ -98,17 +98,19 @@ Module.register('MMM-Facial-Recognition',{
 				this.current_user = this.translate("stranger")
 				this.current_user_id = payload.user;
 				this.sendNotification("STRANGE_CAME")
+				this.sendNotification("SHOW_ALERT", {type: "notification", message: this.translate("hello_guest_message")});
 			}
 			else{
 				this.current_user = this.config.users[payload.user];
 				this.current_user_id = payload.user;
 				this.login_user()
 				this.sendNotification("EMPLOYEE_CAME", this.current_user)
-			}
-			if (this.config.welcomeMessage) {
-				selected_message = Math.ceil(Math.random() * 3)
-				Log.log("WELCOME RAND: " + selected_message);
-				this.sendNotification("SHOW_ALERT", {type: "notification", message: this.translate("hello_message_" + selected_message).replace("%person", this.current_user)});
+			
+				if (this.config.welcomeMessage) {
+					selected_message = Math.ceil(Math.random() * 3)
+					Log.log("WELCOME RAND: " + selected_message);
+					this.sendNotification("SHOW_ALERT", {type: "notification", message: this.translate("hello_message_" + selected_message).replace("%person", this.current_user)});
+				}
 			}
 		}
 		else if (payload.action == "logout"){
