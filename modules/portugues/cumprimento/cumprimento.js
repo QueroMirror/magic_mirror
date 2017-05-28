@@ -18,9 +18,6 @@
 
 Module.register("cumprimento",{
 
-    defaults: {
-      state: 0
-    },
     /*
     states:
     0 - no one
@@ -43,12 +40,13 @@ Module.register("cumprimento",{
 
   start: function() {
     // var self = this;
+    this.state == 0;
     Log.info("Module name: " + this.name);
   },
 
   notificationReceived: function(notification, payload, sender) {
 		Log.info(this.name + " - received notification: " + notification);
-    Log.info(this.name + " - received payload: " + payload + " state: " + this.state);
+    Log.info(this.name + " - received payload: " + payload + " state: " + JSON.stringify(this.state));
     // Log.info(this.name + " - received sender: " + JSON.stringify(sender));
 
     if (this.state == 0) {
