@@ -103,7 +103,7 @@ Module.register('MMM-Facial-Recognition',{
 				this.current_user = this.config.users[payload.user];
 				this.current_user_id = payload.user;
 				this.login_user()
-				this.sendNotification("EMPLOYEE_CAME")
+				this.sendNotification("EMPLOYEE_CAME", this.current_user)
 			}
 			if (this.config.welcomeMessage) {
 				selected_message = Math.ceil(Math.random() * 3)
