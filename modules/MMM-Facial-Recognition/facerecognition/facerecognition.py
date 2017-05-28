@@ -21,6 +21,7 @@ import face
 import cv2
 import config
 import signal
+import os
 
 def to_node(type, message):
     # convert to json and print (node helper will read from stdout)
@@ -56,6 +57,8 @@ else:
     model = cv2.createEigenFaceRecognizer(threshold=config.get("eigenThreshold"))
 
 # Load training file specified in config.js
+# it is possible to reload model?
+    # how to handle that?
 model.load(config.get("trainingFile"))
 to_node("status", 'Training data loaded!')
 
@@ -64,7 +67,15 @@ to_node("status", '$$$$ GET CAMERA $$$')
 # get camera
 camera = config.get_camera()
 
-to_node("status", '$$$$ CAMERA GOT $$$')
+to_node("status", '$$$$ CAMERA GOT $$$ PID: ' + str(os.getpid()))
+
+pid_file = open("./face.pid", 'w')
+pid_file.write(str(os.getpid()))
+pid_file.close()
+
+def reload_model(self, signum):
+    to_node("status", 'reload_model')
+    model.load(config.get("trainingFile"))
 
 def shutdown(self, signum):
     to_node("status", 'Shutdown: Cleaning up camera...')
@@ -72,8 +83,9 @@ def shutdown(self, signum):
     quit()
 
 signal.signal(signal.SIGINT, shutdown)
+signal.signal(signal.SIGUSR1, reload_model)
 
-# to_node('add_user', { "user_name": 'Jao' })
+to_node('add_user', { "user_name": 'Jao' })
 
 # sleep for a second to let the camera warm up
 time.sleep(1)
@@ -85,6 +97,8 @@ while True:
     # if detecion is true, will be used to disable detection if you use a PIR sensor and no motion is detected
     if detection_active is True:
         # Get image
+        to_node("status", "CAMERA CAPTURE")
+
         image = camera.read()
         # Convert image to grayscale.
         image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)

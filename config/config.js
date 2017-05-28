@@ -22,7 +22,7 @@ var config = {
            voice: "US English Female",
         }
     },
-/*    {
+    {
     	module: 'MMM-Facial-Recognition',
     	config: {
     		// 1=LBPH | 2=Fisher | 3=Eigen
@@ -39,7 +39,7 @@ var config = {
     		// Path to your training xml
     		trainingFile: 'modules/MMM-Facial-Recognition/training.xml',
     		// recognition intervall in seconds (smaller number = faster but CPU intens!)
-    		interval: 2,
+    		interval: 1,
     		// Logout delay after last recognition so that a user does not get instantly logged out if he turns away from the mirror for a few seconds
     		logoutDelay: 15,
     		// Array with usernames (copy and paste from training script)
@@ -51,7 +51,7 @@ var config = {
     		// Boolean to toggle welcomeMessage
     		welcomeMessage: true
     	}
-    }, */
+    }, 
 		{
 			module: "alert",
 		},
@@ -67,6 +67,7 @@ var config = {
 			module: "calendar",
 			header: "Quero Calendar",
 			position: "top_right",
+    			classes: "default everyone",
 			config: {
 				calendars: [
 					{
@@ -104,6 +105,7 @@ var config = {
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
+    			classes: "default everyone",
 			config: {
 				feeds: [
 					{

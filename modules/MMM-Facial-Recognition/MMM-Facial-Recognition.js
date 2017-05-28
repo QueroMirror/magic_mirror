@@ -53,15 +53,16 @@ Module.register('MMM-Facial-Recognition',{
 
 	login_user: function () {
 
+		Log.log('login_user: this.current_user: ' + this.current_user + ' this.config.defaultClass: ' + this.config.defaultClass)
 		MM.getModules().withClass(this.config.defaultClass).exceptWithClass(this.config.everyoneClass).enumerate(function(module) {
 			module.hide(1000, function() {
-				Log.log(module.name + ' is hidden.');
+				Log.log('login_user: ' + module.name + ' is hidden.');
 			});
 		});
 
 		MM.getModules().withClass(this.current_user).enumerate(function(module) {
 			module.show(1000, function() {
-				Log.log(module.name + ' is shown.');
+				Log.log('login_user: ' + module.name + ' is shown.');
 			});
 		});
 
@@ -69,15 +70,16 @@ Module.register('MMM-Facial-Recognition',{
 	},
 	logout_user: function () {
 
+		Log.log('logout_user: this.current_user: ' + this.current_user + ' this.config.defaultClass: ' + this.config.defaultClass)
 		MM.getModules().withClass(this.current_user).enumerate(function(module) {
 			module.hide(1000, function() {
-				Log.log(module.name + ' is hidden.');
+				Log.log('logout_user: ' + module.name + ' is hidden.');
 			});
 		});
 
 		MM.getModules().withClass(this.config.defaultClass).exceptWithClass(this.config.everyoneClass).enumerate(function(module) {
 			module.show(1000, function() {
-				Log.log(module.name + ' is shown.');
+				Log.log('logout_user: ' + module.name + ' is shown.');
 			});
 		});
 
@@ -86,7 +88,9 @@ Module.register('MMM-Facial-Recognition',{
 
 	// Override socket notification handler.
 	socketNotificationReceived: function(notification, payload) {
+		Log.info('socketNotificationReceived action: ' + payload.action)
 		if (payload.action == "login"){
+			Log.info('socketNotificationReceived login')
 			if (this.current_user_id != payload.user){
 				this.logout_user()
 			}
@@ -101,7 +105,9 @@ Module.register('MMM-Facial-Recognition',{
 			}
 
 			if (this.config.welcomeMessage) {
-				this.sendNotification("SHOW_ALERT", {type: "notification", message: this.translate("message").replace("%person", this.current_user), title: this.translate("title")});
+				selected_message = Math.ceil(Math.random() * 3)
+				Log.log("WELCOME RAND: " + selected_message);
+				this.sendNotification("SHOW_ALERT", {type: "notification", message: this.translate("hello_message_" + selected_message).replace("%person", this.current_user)});
 			}
 		}
 		else if (payload.action == "logout"){
@@ -111,12 +117,29 @@ Module.register('MMM-Facial-Recognition',{
 	},
 
 	notificationReceived: function(notification, payload, sender) {
+		Log.log('notificationReceived: ' + notification);
 		if (notification === 'DOM_OBJECTS_CREATED') {
+			//tudo que nao for default sera escondido na criacao			
 			MM.getModules().exceptWithClass("default").enumerate(function(module) {
 				module.hide(1000, function() {
 					Log.log('Module is hidden.');
 				});
 			});
+
+		}
+		if (notification === 'NEW_USER_CAPTURE') {
+			Log.log('NEW_USER_CAPTURE RECEIVED');
+
+			fs = require('fs')
+			fs.readFile('./face.pid', 'utf8', function (err,data) {
+			  if (err) {
+			    return console.log(err);
+			  }
+			  Log.log("NEW_USER_CAPTURE PID DATA: " + data);
+			});
+
+			const spawn = require('child_process').spawn;
+			const ls = spawn('kill', ['-USR1', '6948']);
 		}
 	},
 
