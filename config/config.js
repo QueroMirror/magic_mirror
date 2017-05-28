@@ -72,7 +72,7 @@ var config = {
 				calendars: [
 					{
 						symbol: "calendar-check-o ",
-						url: "/home/yves/orage_export.ics"
+						url: "./quero_calendar.ics"
 //						url: "http://www.calendarlabs.com/templates/ical/US-Holidays.ics"
 					}
 				]
