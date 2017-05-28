@@ -26,7 +26,7 @@ Module.register("cumprimento",{
     0 - no one
     1 - employee - > final state
     2 - guest -> initial guest state ( wanna talk someone? )
-    3 - how?
+    3 - who?
     4 - user selected
 
     5 - wait for response?
@@ -48,7 +48,7 @@ Module.register("cumprimento",{
 
   notificationReceived: function(notification, payload, sender) {
 		Log.info(this.name + " - received notification: " + notification);
-    Log.info(this.name + " - received payload: " + payload);
+    Log.info(this.name + " - received payload: " + payload + " state: " + this.state);
     // Log.info(this.name + " - received sender: " + JSON.stringify(sender));
 
     if (this.state == 0) {
@@ -71,7 +71,7 @@ Module.register("cumprimento",{
       if (notification == "VOICE_COMMAND_YES") {
         Log.info(this.name + " - SIM, quer falar com alguem!");
         responsiveVoice.speak( "Com quem você gostaria de falar.");
-        this.state = 4;
+        this.state = 3;
       }
       if (notification == "VOICE_COMMAND_NO") {
         Log.info(this.name + " - NAO, nao quer falar com alguem!");
@@ -79,7 +79,7 @@ Module.register("cumprimento",{
         this.state = 0;
       }
     }
-    if (this.state == 2 || this.state == 4) {
+    if (this.state == 2 || this.state == 3) {
       if (notification == "VOICE_COMMAND_RICARDO") {
         responsiveVoice.speak( "Ok, vou procurar o Ricardo e avisar que você está aqui.");
         this.state = 0;
