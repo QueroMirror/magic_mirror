@@ -121,7 +121,7 @@ while True:
             face_not_found_count = face_not_found_count + 1
             to_node("status", "NOT_FOUND: " + str(face_not_found_count) + " current_user: " + str(current_user)) 
             # 1 amostragem por segundo, 5 amostragens sem achar ninguem, desloga
-            if (current_user is not None and face_not_found_count > 4 and current_user != 0):
+            if (current_user is not None and face_not_found_count > 4):
             # if last detection exceeds timeout and there is someone logged in -> logout!
             # if (current_user is not None and time.time() - login_timestamp > config.get("logoutDelay")):
                 # callback logout to node helper
