@@ -55,7 +55,7 @@ Module.register("cumprimento",{
       if (notification == "EMPLOYEE_CAME") {
         if (responsiveVoice) {
             this.state = 1;
-            responsiveVoice.speak( "Olá " + payload );
+            responsiveVoice.speak( "Olá " + payload + '. Seja muito bem vindo!');
         }
       }
 
