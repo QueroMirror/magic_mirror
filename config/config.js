@@ -111,8 +111,8 @@ var config = {
 		},
 		{
 			module: "newsfeed",
-			position: "bottom_bar",
-    			classes: "default everyone",
+			position: "lower_third",
+    	classes: "default everyone",
 			config: {
 				feeds: [
 					{

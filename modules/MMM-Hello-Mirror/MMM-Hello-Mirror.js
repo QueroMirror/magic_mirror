@@ -128,6 +128,16 @@ Module.register("MMM-Hello-Mirror", {
                               responsiveVoice.speak( "Entendi, Não" );
                           }
                       },
+                      'Ricardo': function() {
+                          Log.info('Ricardo ' + self.name);
+                          if (self.config.broadcastEvents) {
+                              self.sendNotification("VOICE_COMMAND_RICARDO", "Ricardo");
+                          }
+                          if (responsiveVoice) {
+                              console.log("VOICE_COMMAND_RICARDO")
+                              responsiveVoice.speak( "Entendi, Ricardo" );
+                          }
+                      }
                       'Michael Douglas': function() {
                           Log.info('Michael Douglas ' + self.name);
                           if (self.config.broadcastEvents) {
