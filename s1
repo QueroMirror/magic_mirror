@@ -1,0 +1,350 @@
+node      24866              yves  cwd       DIR                8,1      4096     377876 /home/yves/hack1/MagicMirror
+node      24866              yves  rtd       DIR                8,1      4096          2 /
+node      24866              yves  txt       REG                8,1  30190636    3023478 /usr/local/bin/node
+node      24866              yves  mem       REG                8,1     84856     288823 /lib/x86_64-linux-gnu/libresolv-2.19.so
+node      24866              yves  mem       REG                8,1     22952     288817 /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+node      24866              yves  mem       REG                8,1     10304     262707 /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+node      24866              yves  mem       REG                8,1     47712     288818 /lib/x86_64-linux-gnu/libnss_files-2.19.so
+node      24866              yves  mem       REG                8,1   1738176     288809 /lib/x86_64-linux-gnu/libc-2.19.so
+node      24866              yves  mem       REG                8,1    137440     288780 /lib/x86_64-linux-gnu/libpthread-2.19.so
+node      24866              yves  mem       REG                8,1     90096     262148 /lib/x86_64-linux-gnu/libgcc_s.so.1
+node      24866              yves  mem       REG                8,1   1051056     288813 /lib/x86_64-linux-gnu/libm-2.19.so
+node      24866              yves  mem       REG                8,1   1008120    2888369 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+node      24866              yves  mem       REG                8,1     31784     288824 /lib/x86_64-linux-gnu/librt-2.19.so
+node      24866              yves  mem       REG                8,1     14664     288812 /lib/x86_64-linux-gnu/libdl-2.19.so
+node      24866              yves  mem       REG                8,1    140928     288784 /lib/x86_64-linux-gnu/ld-2.19.so
+node      24866              yves    0u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866              yves    1u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866              yves    2u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866              yves    3r     FIFO                0,8       0t0     588706 pipe
+node      24866              yves    4w     FIFO                0,8       0t0     588706 pipe
+node      24866              yves    5u     0000                0,9         0       7679 anon_inode
+node      24866              yves    6r     FIFO                0,8       0t0     588707 pipe
+node      24866              yves    7w     FIFO                0,8       0t0     588707 pipe
+node      24866              yves    8u     0000                0,9         0       7679 anon_inode
+node      24866              yves    9u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866              yves   10r      CHR                1,3       0t0       1028 /dev/null
+node      24866              yves   11u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866              yves   12u     IPv6             588713       0t0        TCP *:http-alt (LISTEN)
+node      24866              yves   13u     IPv6             588716       0t0        TCP localhost:http-alt->localhost:57787 (ESTABLISHED)
+node      24866              yves   14u     IPv6             588718       0t0        TCP localhost:http-alt->localhost:57788 (ESTABLISHED)
+node      24866              yves   15u     IPv6             591144       0t0        TCP localhost:http-alt->localhost:57804 (ESTABLISHED)
+node      24866              yves   16u     IPv6             589740       0t0        TCP localhost:http-alt->localhost:57800 (ESTABLISHED)
+node      24866              yves   17u     IPv6             589741       0t0        TCP localhost:http-alt->localhost:57801 (ESTABLISHED)
+node      24866              yves   18u     IPv6             589742       0t0        TCP localhost:http-alt->localhost:57802 (ESTABLISHED)
+node      24866              yves   19u     IPv6             589743       0t0        TCP localhost:http-alt->localhost:57803 (ESTABLISHED)
+node      24866 24867        yves  cwd       DIR                8,1      4096     377876 /home/yves/hack1/MagicMirror
+node      24866 24867        yves  rtd       DIR                8,1      4096          2 /
+node      24866 24867        yves  txt       REG                8,1  30190636    3023478 /usr/local/bin/node
+node      24866 24867        yves  mem       REG                8,1     84856     288823 /lib/x86_64-linux-gnu/libresolv-2.19.so
+node      24866 24867        yves  mem       REG                8,1     22952     288817 /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+node      24866 24867        yves  mem       REG                8,1     10304     262707 /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+node      24866 24867        yves  mem       REG                8,1     47712     288818 /lib/x86_64-linux-gnu/libnss_files-2.19.so
+node      24866 24867        yves  mem       REG                8,1   1738176     288809 /lib/x86_64-linux-gnu/libc-2.19.so
+node      24866 24867        yves  mem       REG                8,1    137440     288780 /lib/x86_64-linux-gnu/libpthread-2.19.so
+node      24866 24867        yves  mem       REG                8,1     90096     262148 /lib/x86_64-linux-gnu/libgcc_s.so.1
+node      24866 24867        yves  mem       REG                8,1   1051056     288813 /lib/x86_64-linux-gnu/libm-2.19.so
+node      24866 24867        yves  mem       REG                8,1   1008120    2888369 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+node      24866 24867        yves  mem       REG                8,1     31784     288824 /lib/x86_64-linux-gnu/librt-2.19.so
+node      24866 24867        yves  mem       REG                8,1     14664     288812 /lib/x86_64-linux-gnu/libdl-2.19.so
+node      24866 24867        yves  mem       REG                8,1    140928     288784 /lib/x86_64-linux-gnu/ld-2.19.so
+node      24866 24867        yves    0u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24867        yves    1u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24867        yves    2u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24867        yves    3r     FIFO                0,8       0t0     588706 pipe
+node      24866 24867        yves    4w     FIFO                0,8       0t0     588706 pipe
+node      24866 24867        yves    5u     0000                0,9         0       7679 anon_inode
+node      24866 24867        yves    6r     FIFO                0,8       0t0     588707 pipe
+node      24866 24867        yves    7w     FIFO                0,8       0t0     588707 pipe
+node      24866 24867        yves    8u     0000                0,9         0       7679 anon_inode
+node      24866 24867        yves    9u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24867        yves   10r      CHR                1,3       0t0       1028 /dev/null
+node      24866 24867        yves   11u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24867        yves   12u     IPv6             588713       0t0        TCP *:http-alt (LISTEN)
+node      24866 24867        yves   13u     IPv6             588716       0t0        TCP localhost:http-alt->localhost:57787 (ESTABLISHED)
+node      24866 24867        yves   14u     IPv6             588718       0t0        TCP localhost:http-alt->localhost:57788 (ESTABLISHED)
+node      24866 24867        yves   15u     IPv6             591144       0t0        TCP localhost:http-alt->localhost:57804 (ESTABLISHED)
+node      24866 24867        yves   16u     IPv6             589740       0t0        TCP localhost:http-alt->localhost:57800 (ESTABLISHED)
+node      24866 24867        yves   17u     IPv6             589741       0t0        TCP localhost:http-alt->localhost:57801 (ESTABLISHED)
+node      24866 24867        yves   18u     IPv6             589742       0t0        TCP localhost:http-alt->localhost:57802 (ESTABLISHED)
+node      24866 24867        yves   19u     IPv6             589743       0t0        TCP localhost:http-alt->localhost:57803 (ESTABLISHED)
+V8        24866 24868        yves  cwd       DIR                8,1      4096     377876 /home/yves/hack1/MagicMirror
+V8        24866 24868        yves  rtd       DIR                8,1      4096          2 /
+V8        24866 24868        yves  txt       REG                8,1  30190636    3023478 /usr/local/bin/node
+V8        24866 24868        yves  mem       REG                8,1     84856     288823 /lib/x86_64-linux-gnu/libresolv-2.19.so
+V8        24866 24868        yves  mem       REG                8,1     22952     288817 /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+V8        24866 24868        yves  mem       REG                8,1     10304     262707 /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+V8        24866 24868        yves  mem       REG                8,1     47712     288818 /lib/x86_64-linux-gnu/libnss_files-2.19.so
+V8        24866 24868        yves  mem       REG                8,1   1738176     288809 /lib/x86_64-linux-gnu/libc-2.19.so
+V8        24866 24868        yves  mem       REG                8,1    137440     288780 /lib/x86_64-linux-gnu/libpthread-2.19.so
+V8        24866 24868        yves  mem       REG                8,1     90096     262148 /lib/x86_64-linux-gnu/libgcc_s.so.1
+V8        24866 24868        yves  mem       REG                8,1   1051056     288813 /lib/x86_64-linux-gnu/libm-2.19.so
+V8        24866 24868        yves  mem       REG                8,1   1008120    2888369 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+V8        24866 24868        yves  mem       REG                8,1     31784     288824 /lib/x86_64-linux-gnu/librt-2.19.so
+V8        24866 24868        yves  mem       REG                8,1     14664     288812 /lib/x86_64-linux-gnu/libdl-2.19.so
+V8        24866 24868        yves  mem       REG                8,1    140928     288784 /lib/x86_64-linux-gnu/ld-2.19.so
+V8        24866 24868        yves    0u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24868        yves    1u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24868        yves    2u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24868        yves    3r     FIFO                0,8       0t0     588706 pipe
+V8        24866 24868        yves    4w     FIFO                0,8       0t0     588706 pipe
+V8        24866 24868        yves    5u     0000                0,9         0       7679 anon_inode
+V8        24866 24868        yves    6r     FIFO                0,8       0t0     588707 pipe
+V8        24866 24868        yves    7w     FIFO                0,8       0t0     588707 pipe
+V8        24866 24868        yves    8u     0000                0,9         0       7679 anon_inode
+V8        24866 24868        yves    9u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24868        yves   10r      CHR                1,3       0t0       1028 /dev/null
+V8        24866 24868        yves   11u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24868        yves   12u     IPv6             588713       0t0        TCP *:http-alt (LISTEN)
+V8        24866 24868        yves   13u     IPv6             588716       0t0        TCP localhost:http-alt->localhost:57787 (ESTABLISHED)
+V8        24866 24868        yves   14u     IPv6             588718       0t0        TCP localhost:http-alt->localhost:57788 (ESTABLISHED)
+V8        24866 24868        yves   15u     IPv6             591144       0t0        TCP localhost:http-alt->localhost:57804 (ESTABLISHED)
+V8        24866 24868        yves   16u     IPv6             589740       0t0        TCP localhost:http-alt->localhost:57800 (ESTABLISHED)
+V8        24866 24868        yves   17u     IPv6             589741       0t0        TCP localhost:http-alt->localhost:57801 (ESTABLISHED)
+V8        24866 24868        yves   18u     IPv6             589742       0t0        TCP localhost:http-alt->localhost:57802 (ESTABLISHED)
+V8        24866 24868        yves   19u     IPv6             589743       0t0        TCP localhost:http-alt->localhost:57803 (ESTABLISHED)
+V8        24866 24869        yves  cwd       DIR                8,1      4096     377876 /home/yves/hack1/MagicMirror
+V8        24866 24869        yves  rtd       DIR                8,1      4096          2 /
+V8        24866 24869        yves  txt       REG                8,1  30190636    3023478 /usr/local/bin/node
+V8        24866 24869        yves  mem       REG                8,1     84856     288823 /lib/x86_64-linux-gnu/libresolv-2.19.so
+V8        24866 24869        yves  mem       REG                8,1     22952     288817 /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+V8        24866 24869        yves  mem       REG                8,1     10304     262707 /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+V8        24866 24869        yves  mem       REG                8,1     47712     288818 /lib/x86_64-linux-gnu/libnss_files-2.19.so
+V8        24866 24869        yves  mem       REG                8,1   1738176     288809 /lib/x86_64-linux-gnu/libc-2.19.so
+V8        24866 24869        yves  mem       REG                8,1    137440     288780 /lib/x86_64-linux-gnu/libpthread-2.19.so
+V8        24866 24869        yves  mem       REG                8,1     90096     262148 /lib/x86_64-linux-gnu/libgcc_s.so.1
+V8        24866 24869        yves  mem       REG                8,1   1051056     288813 /lib/x86_64-linux-gnu/libm-2.19.so
+V8        24866 24869        yves  mem       REG                8,1   1008120    2888369 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+V8        24866 24869        yves  mem       REG                8,1     31784     288824 /lib/x86_64-linux-gnu/librt-2.19.so
+V8        24866 24869        yves  mem       REG                8,1     14664     288812 /lib/x86_64-linux-gnu/libdl-2.19.so
+V8        24866 24869        yves  mem       REG                8,1    140928     288784 /lib/x86_64-linux-gnu/ld-2.19.so
+V8        24866 24869        yves    0u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24869        yves    1u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24869        yves    2u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24869        yves    3r     FIFO                0,8       0t0     588706 pipe
+V8        24866 24869        yves    4w     FIFO                0,8       0t0     588706 pipe
+V8        24866 24869        yves    5u     0000                0,9         0       7679 anon_inode
+V8        24866 24869        yves    6r     FIFO                0,8       0t0     588707 pipe
+V8        24866 24869        yves    7w     FIFO                0,8       0t0     588707 pipe
+V8        24866 24869        yves    8u     0000                0,9         0       7679 anon_inode
+V8        24866 24869        yves    9u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24869        yves   10r      CHR                1,3       0t0       1028 /dev/null
+V8        24866 24869        yves   11u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24869        yves   12u     IPv6             588713       0t0        TCP *:http-alt (LISTEN)
+V8        24866 24869        yves   13u     IPv6             588716       0t0        TCP localhost:http-alt->localhost:57787 (ESTABLISHED)
+V8        24866 24869        yves   14u     IPv6             588718       0t0        TCP localhost:http-alt->localhost:57788 (ESTABLISHED)
+V8        24866 24869        yves   15u     IPv6             591144       0t0        TCP localhost:http-alt->localhost:57804 (ESTABLISHED)
+V8        24866 24869        yves   16u     IPv6             589740       0t0        TCP localhost:http-alt->localhost:57800 (ESTABLISHED)
+V8        24866 24869        yves   17u     IPv6             589741       0t0        TCP localhost:http-alt->localhost:57801 (ESTABLISHED)
+V8        24866 24869        yves   18u     IPv6             589742       0t0        TCP localhost:http-alt->localhost:57802 (ESTABLISHED)
+V8        24866 24869        yves   19u     IPv6             589743       0t0        TCP localhost:http-alt->localhost:57803 (ESTABLISHED)
+V8        24866 24870        yves  cwd       DIR                8,1      4096     377876 /home/yves/hack1/MagicMirror
+V8        24866 24870        yves  rtd       DIR                8,1      4096          2 /
+V8        24866 24870        yves  txt       REG                8,1  30190636    3023478 /usr/local/bin/node
+V8        24866 24870        yves  mem       REG                8,1     84856     288823 /lib/x86_64-linux-gnu/libresolv-2.19.so
+V8        24866 24870        yves  mem       REG                8,1     22952     288817 /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+V8        24866 24870        yves  mem       REG                8,1     10304     262707 /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+V8        24866 24870        yves  mem       REG                8,1     47712     288818 /lib/x86_64-linux-gnu/libnss_files-2.19.so
+V8        24866 24870        yves  mem       REG                8,1   1738176     288809 /lib/x86_64-linux-gnu/libc-2.19.so
+V8        24866 24870        yves  mem       REG                8,1    137440     288780 /lib/x86_64-linux-gnu/libpthread-2.19.so
+V8        24866 24870        yves  mem       REG                8,1     90096     262148 /lib/x86_64-linux-gnu/libgcc_s.so.1
+V8        24866 24870        yves  mem       REG                8,1   1051056     288813 /lib/x86_64-linux-gnu/libm-2.19.so
+V8        24866 24870        yves  mem       REG                8,1   1008120    2888369 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+V8        24866 24870        yves  mem       REG                8,1     31784     288824 /lib/x86_64-linux-gnu/librt-2.19.so
+V8        24866 24870        yves  mem       REG                8,1     14664     288812 /lib/x86_64-linux-gnu/libdl-2.19.so
+V8        24866 24870        yves  mem       REG                8,1    140928     288784 /lib/x86_64-linux-gnu/ld-2.19.so
+V8        24866 24870        yves    0u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24870        yves    1u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24870        yves    2u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24870        yves    3r     FIFO                0,8       0t0     588706 pipe
+V8        24866 24870        yves    4w     FIFO                0,8       0t0     588706 pipe
+V8        24866 24870        yves    5u     0000                0,9         0       7679 anon_inode
+V8        24866 24870        yves    6r     FIFO                0,8       0t0     588707 pipe
+V8        24866 24870        yves    7w     FIFO                0,8       0t0     588707 pipe
+V8        24866 24870        yves    8u     0000                0,9         0       7679 anon_inode
+V8        24866 24870        yves    9u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24870        yves   10r      CHR                1,3       0t0       1028 /dev/null
+V8        24866 24870        yves   11u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24870        yves   12u     IPv6             588713       0t0        TCP *:http-alt (LISTEN)
+V8        24866 24870        yves   13u     IPv6             588716       0t0        TCP localhost:http-alt->localhost:57787 (ESTABLISHED)
+V8        24866 24870        yves   14u     IPv6             588718       0t0        TCP localhost:http-alt->localhost:57788 (ESTABLISHED)
+V8        24866 24870        yves   15u     IPv6             591144       0t0        TCP localhost:http-alt->localhost:57804 (ESTABLISHED)
+V8        24866 24870        yves   16u     IPv6             589740       0t0        TCP localhost:http-alt->localhost:57800 (ESTABLISHED)
+V8        24866 24870        yves   17u     IPv6             589741       0t0        TCP localhost:http-alt->localhost:57801 (ESTABLISHED)
+V8        24866 24870        yves   18u     IPv6             589742       0t0        TCP localhost:http-alt->localhost:57802 (ESTABLISHED)
+V8        24866 24870        yves   19u     IPv6             589743       0t0        TCP localhost:http-alt->localhost:57803 (ESTABLISHED)
+V8        24866 24871        yves  cwd       DIR                8,1      4096     377876 /home/yves/hack1/MagicMirror
+V8        24866 24871        yves  rtd       DIR                8,1      4096          2 /
+V8        24866 24871        yves  txt       REG                8,1  30190636    3023478 /usr/local/bin/node
+V8        24866 24871        yves  mem       REG                8,1     84856     288823 /lib/x86_64-linux-gnu/libresolv-2.19.so
+V8        24866 24871        yves  mem       REG                8,1     22952     288817 /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+V8        24866 24871        yves  mem       REG                8,1     10304     262707 /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+V8        24866 24871        yves  mem       REG                8,1     47712     288818 /lib/x86_64-linux-gnu/libnss_files-2.19.so
+V8        24866 24871        yves  mem       REG                8,1   1738176     288809 /lib/x86_64-linux-gnu/libc-2.19.so
+V8        24866 24871        yves  mem       REG                8,1    137440     288780 /lib/x86_64-linux-gnu/libpthread-2.19.so
+V8        24866 24871        yves  mem       REG                8,1     90096     262148 /lib/x86_64-linux-gnu/libgcc_s.so.1
+V8        24866 24871        yves  mem       REG                8,1   1051056     288813 /lib/x86_64-linux-gnu/libm-2.19.so
+V8        24866 24871        yves  mem       REG                8,1   1008120    2888369 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+V8        24866 24871        yves  mem       REG                8,1     31784     288824 /lib/x86_64-linux-gnu/librt-2.19.so
+V8        24866 24871        yves  mem       REG                8,1     14664     288812 /lib/x86_64-linux-gnu/libdl-2.19.so
+V8        24866 24871        yves  mem       REG                8,1    140928     288784 /lib/x86_64-linux-gnu/ld-2.19.so
+V8        24866 24871        yves    0u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24871        yves    1u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24871        yves    2u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24871        yves    3r     FIFO                0,8       0t0     588706 pipe
+V8        24866 24871        yves    4w     FIFO                0,8       0t0     588706 pipe
+V8        24866 24871        yves    5u     0000                0,9         0       7679 anon_inode
+V8        24866 24871        yves    6r     FIFO                0,8       0t0     588707 pipe
+V8        24866 24871        yves    7w     FIFO                0,8       0t0     588707 pipe
+V8        24866 24871        yves    8u     0000                0,9         0       7679 anon_inode
+V8        24866 24871        yves    9u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24871        yves   10r      CHR                1,3       0t0       1028 /dev/null
+V8        24866 24871        yves   11u      CHR              136,0       0t0          3 /dev/pts/0
+V8        24866 24871        yves   12u     IPv6             588713       0t0        TCP *:http-alt (LISTEN)
+V8        24866 24871        yves   13u     IPv6             588716       0t0        TCP localhost:http-alt->localhost:57787 (ESTABLISHED)
+V8        24866 24871        yves   14u     IPv6             588718       0t0        TCP localhost:http-alt->localhost:57788 (ESTABLISHED)
+V8        24866 24871        yves   15u     IPv6             591144       0t0        TCP localhost:http-alt->localhost:57804 (ESTABLISHED)
+V8        24866 24871        yves   16u     IPv6             589740       0t0        TCP localhost:http-alt->localhost:57800 (ESTABLISHED)
+V8        24866 24871        yves   17u     IPv6             589741       0t0        TCP localhost:http-alt->localhost:57801 (ESTABLISHED)
+V8        24866 24871        yves   18u     IPv6             589742       0t0        TCP localhost:http-alt->localhost:57802 (ESTABLISHED)
+V8        24866 24871        yves   19u     IPv6             589743       0t0        TCP localhost:http-alt->localhost:57803 (ESTABLISHED)
+node      24866 24872        yves  cwd       DIR                8,1      4096     377876 /home/yves/hack1/MagicMirror
+node      24866 24872        yves  rtd       DIR                8,1      4096          2 /
+node      24866 24872        yves  txt       REG                8,1  30190636    3023478 /usr/local/bin/node
+node      24866 24872        yves  mem       REG                8,1     84856     288823 /lib/x86_64-linux-gnu/libresolv-2.19.so
+node      24866 24872        yves  mem       REG                8,1     22952     288817 /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+node      24866 24872        yves  mem       REG                8,1     10304     262707 /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+node      24866 24872        yves  mem       REG                8,1     47712     288818 /lib/x86_64-linux-gnu/libnss_files-2.19.so
+node      24866 24872        yves  mem       REG                8,1   1738176     288809 /lib/x86_64-linux-gnu/libc-2.19.so
+node      24866 24872        yves  mem       REG                8,1    137440     288780 /lib/x86_64-linux-gnu/libpthread-2.19.so
+node      24866 24872        yves  mem       REG                8,1     90096     262148 /lib/x86_64-linux-gnu/libgcc_s.so.1
+node      24866 24872        yves  mem       REG                8,1   1051056     288813 /lib/x86_64-linux-gnu/libm-2.19.so
+node      24866 24872        yves  mem       REG                8,1   1008120    2888369 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+node      24866 24872        yves  mem       REG                8,1     31784     288824 /lib/x86_64-linux-gnu/librt-2.19.so
+node      24866 24872        yves  mem       REG                8,1     14664     288812 /lib/x86_64-linux-gnu/libdl-2.19.so
+node      24866 24872        yves  mem       REG                8,1    140928     288784 /lib/x86_64-linux-gnu/ld-2.19.so
+node      24866 24872        yves    0u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24872        yves    1u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24872        yves    2u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24872        yves    3r     FIFO                0,8       0t0     588706 pipe
+node      24866 24872        yves    4w     FIFO                0,8       0t0     588706 pipe
+node      24866 24872        yves    5u     0000                0,9         0       7679 anon_inode
+node      24866 24872        yves    6r     FIFO                0,8       0t0     588707 pipe
+node      24866 24872        yves    7w     FIFO                0,8       0t0     588707 pipe
+node      24866 24872        yves    8u     0000                0,9         0       7679 anon_inode
+node      24866 24872        yves    9u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24872        yves   10r      CHR                1,3       0t0       1028 /dev/null
+node      24866 24872        yves   11u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24872        yves   12u     IPv6             588713       0t0        TCP *:http-alt (LISTEN)
+node      24866 24872        yves   13u     IPv6             588716       0t0        TCP localhost:http-alt->localhost:57787 (ESTABLISHED)
+node      24866 24872        yves   14u     IPv6             588718       0t0        TCP localhost:http-alt->localhost:57788 (ESTABLISHED)
+node      24866 24872        yves   15u     IPv6             591144       0t0        TCP localhost:http-alt->localhost:57804 (ESTABLISHED)
+node      24866 24872        yves   16u     IPv6             589740       0t0        TCP localhost:http-alt->localhost:57800 (ESTABLISHED)
+node      24866 24872        yves   17u     IPv6             589741       0t0        TCP localhost:http-alt->localhost:57801 (ESTABLISHED)
+node      24866 24872        yves   18u     IPv6             589742       0t0        TCP localhost:http-alt->localhost:57802 (ESTABLISHED)
+node      24866 24872        yves   19u     IPv6             589743       0t0        TCP localhost:http-alt->localhost:57803 (ESTABLISHED)
+node      24866 24873        yves  cwd       DIR                8,1      4096     377876 /home/yves/hack1/MagicMirror
+node      24866 24873        yves  rtd       DIR                8,1      4096          2 /
+node      24866 24873        yves  txt       REG                8,1  30190636    3023478 /usr/local/bin/node
+node      24866 24873        yves  mem       REG                8,1     84856     288823 /lib/x86_64-linux-gnu/libresolv-2.19.so
+node      24866 24873        yves  mem       REG                8,1     22952     288817 /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+node      24866 24873        yves  mem       REG                8,1     10304     262707 /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+node      24866 24873        yves  mem       REG                8,1     47712     288818 /lib/x86_64-linux-gnu/libnss_files-2.19.so
+node      24866 24873        yves  mem       REG                8,1   1738176     288809 /lib/x86_64-linux-gnu/libc-2.19.so
+node      24866 24873        yves  mem       REG                8,1    137440     288780 /lib/x86_64-linux-gnu/libpthread-2.19.so
+node      24866 24873        yves  mem       REG                8,1     90096     262148 /lib/x86_64-linux-gnu/libgcc_s.so.1
+node      24866 24873        yves  mem       REG                8,1   1051056     288813 /lib/x86_64-linux-gnu/libm-2.19.so
+node      24866 24873        yves  mem       REG                8,1   1008120    2888369 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+node      24866 24873        yves  mem       REG                8,1     31784     288824 /lib/x86_64-linux-gnu/librt-2.19.so
+node      24866 24873        yves  mem       REG                8,1     14664     288812 /lib/x86_64-linux-gnu/libdl-2.19.so
+node      24866 24873        yves  mem       REG                8,1    140928     288784 /lib/x86_64-linux-gnu/ld-2.19.so
+node      24866 24873        yves    0u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24873        yves    1u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24873        yves    2u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24873        yves    3r     FIFO                0,8       0t0     588706 pipe
+node      24866 24873        yves    4w     FIFO                0,8       0t0     588706 pipe
+node      24866 24873        yves    5u     0000                0,9         0       7679 anon_inode
+node      24866 24873        yves    6r     FIFO                0,8       0t0     588707 pipe
+node      24866 24873        yves    7w     FIFO                0,8       0t0     588707 pipe
+node      24866 24873        yves    8u     0000                0,9         0       7679 anon_inode
+node      24866 24873        yves    9u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24873        yves   10r      CHR                1,3       0t0       1028 /dev/null
+node      24866 24873        yves   11u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24873        yves   12u     IPv6             588713       0t0        TCP *:http-alt (LISTEN)
+node      24866 24873        yves   13u     IPv6             588716       0t0        TCP localhost:http-alt->localhost:57787 (ESTABLISHED)
+node      24866 24873        yves   14u     IPv6             588718       0t0        TCP localhost:http-alt->localhost:57788 (ESTABLISHED)
+node      24866 24873        yves   15u     IPv6             591144       0t0        TCP localhost:http-alt->localhost:57804 (ESTABLISHED)
+node      24866 24873        yves   16u     IPv6             589740       0t0        TCP localhost:http-alt->localhost:57800 (ESTABLISHED)
+node      24866 24873        yves   17u     IPv6             589741       0t0        TCP localhost:http-alt->localhost:57801 (ESTABLISHED)
+node      24866 24873        yves   18u     IPv6             589742       0t0        TCP localhost:http-alt->localhost:57802 (ESTABLISHED)
+node      24866 24873        yves   19u     IPv6             589743       0t0        TCP localhost:http-alt->localhost:57803 (ESTABLISHED)
+node      24866 24874        yves  cwd       DIR                8,1      4096     377876 /home/yves/hack1/MagicMirror
+node      24866 24874        yves  rtd       DIR                8,1      4096          2 /
+node      24866 24874        yves  txt       REG                8,1  30190636    3023478 /usr/local/bin/node
+node      24866 24874        yves  mem       REG                8,1     84856     288823 /lib/x86_64-linux-gnu/libresolv-2.19.so
+node      24866 24874        yves  mem       REG                8,1     22952     288817 /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+node      24866 24874        yves  mem       REG                8,1     10304     262707 /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+node      24866 24874        yves  mem       REG                8,1     47712     288818 /lib/x86_64-linux-gnu/libnss_files-2.19.so
+node      24866 24874        yves  mem       REG                8,1   1738176     288809 /lib/x86_64-linux-gnu/libc-2.19.so
+node      24866 24874        yves  mem       REG                8,1    137440     288780 /lib/x86_64-linux-gnu/libpthread-2.19.so
+node      24866 24874        yves  mem       REG                8,1     90096     262148 /lib/x86_64-linux-gnu/libgcc_s.so.1
+node      24866 24874        yves  mem       REG                8,1   1051056     288813 /lib/x86_64-linux-gnu/libm-2.19.so
+node      24866 24874        yves  mem       REG                8,1   1008120    2888369 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+node      24866 24874        yves  mem       REG                8,1     31784     288824 /lib/x86_64-linux-gnu/librt-2.19.so
+node      24866 24874        yves  mem       REG                8,1     14664     288812 /lib/x86_64-linux-gnu/libdl-2.19.so
+node      24866 24874        yves  mem       REG                8,1    140928     288784 /lib/x86_64-linux-gnu/ld-2.19.so
+node      24866 24874        yves    0u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24874        yves    1u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24874        yves    2u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24874        yves    3r     FIFO                0,8       0t0     588706 pipe
+node      24866 24874        yves    4w     FIFO                0,8       0t0     588706 pipe
+node      24866 24874        yves    5u     0000                0,9         0       7679 anon_inode
+node      24866 24874        yves    6r     FIFO                0,8       0t0     588707 pipe
+node      24866 24874        yves    7w     FIFO                0,8       0t0     588707 pipe
+node      24866 24874        yves    8u     0000                0,9         0       7679 anon_inode
+node      24866 24874        yves    9u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24874        yves   10r      CHR                1,3       0t0       1028 /dev/null
+node      24866 24874        yves   11u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24874        yves   12u     IPv6             588713       0t0        TCP *:http-alt (LISTEN)
+node      24866 24874        yves   13u     IPv6             588716       0t0        TCP localhost:http-alt->localhost:57787 (ESTABLISHED)
+node      24866 24874        yves   14u     IPv6             588718       0t0        TCP localhost:http-alt->localhost:57788 (ESTABLISHED)
+node      24866 24874        yves   15u     IPv6             591144       0t0        TCP localhost:http-alt->localhost:57804 (ESTABLISHED)
+node      24866 24874        yves   16u     IPv6             589740       0t0        TCP localhost:http-alt->localhost:57800 (ESTABLISHED)
+node      24866 24874        yves   17u     IPv6             589741       0t0        TCP localhost:http-alt->localhost:57801 (ESTABLISHED)
+node      24866 24874        yves   18u     IPv6             589742       0t0        TCP localhost:http-alt->localhost:57802 (ESTABLISHED)
+node      24866 24874        yves   19u     IPv6             589743       0t0        TCP localhost:http-alt->localhost:57803 (ESTABLISHED)
+node      24866 24875        yves  cwd       DIR                8,1      4096     377876 /home/yves/hack1/MagicMirror
+node      24866 24875        yves  rtd       DIR                8,1      4096          2 /
+node      24866 24875        yves  txt       REG                8,1  30190636    3023478 /usr/local/bin/node
+node      24866 24875        yves  mem       REG                8,1     84856     288823 /lib/x86_64-linux-gnu/libresolv-2.19.so
+node      24866 24875        yves  mem       REG                8,1     22952     288817 /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+node      24866 24875        yves  mem       REG                8,1     10304     262707 /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+node      24866 24875        yves  mem       REG                8,1     47712     288818 /lib/x86_64-linux-gnu/libnss_files-2.19.so
+node      24866 24875        yves  mem       REG                8,1   1738176     288809 /lib/x86_64-linux-gnu/libc-2.19.so
+node      24866 24875        yves  mem       REG                8,1    137440     288780 /lib/x86_64-linux-gnu/libpthread-2.19.so
+node      24866 24875        yves  mem       REG                8,1     90096     262148 /lib/x86_64-linux-gnu/libgcc_s.so.1
+node      24866 24875        yves  mem       REG                8,1   1051056     288813 /lib/x86_64-linux-gnu/libm-2.19.so
+node      24866 24875        yves  mem       REG                8,1   1008120    2888369 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+node      24866 24875        yves  mem       REG                8,1     31784     288824 /lib/x86_64-linux-gnu/librt-2.19.so
+node      24866 24875        yves  mem       REG                8,1     14664     288812 /lib/x86_64-linux-gnu/libdl-2.19.so
+node      24866 24875        yves  mem       REG                8,1    140928     288784 /lib/x86_64-linux-gnu/ld-2.19.so
+node      24866 24875        yves    0u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24875        yves    1u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24875        yves    2u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24875        yves    3r     FIFO                0,8       0t0     588706 pipe
+node      24866 24875        yves    4w     FIFO                0,8       0t0     588706 pipe
+node      24866 24875        yves    5u     0000                0,9         0       7679 anon_inode
+node      24866 24875        yves    6r     FIFO                0,8       0t0     588707 pipe
+node      24866 24875        yves    7w     FIFO                0,8       0t0     588707 pipe
+node      24866 24875        yves    8u     0000                0,9         0       7679 anon_inode
+node      24866 24875        yves    9u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24875        yves   10r      CHR                1,3       0t0       1028 /dev/null
+node      24866 24875        yves   11u      CHR              136,0       0t0          3 /dev/pts/0
+node      24866 24875        yves   12u     IPv6             588713       0t0        TCP *:http-alt (LISTEN)
+node      24866 24875        yves   13u     IPv6             588716       0t0        TCP localhost:http-alt->localhost:57787 (ESTABLISHED)
+node      24866 24875        yves   14u     IPv6             588718       0t0        TCP localhost:http-alt->localhost:57788 (ESTABLISHED)
+node      24866 24875        yves   15u     IPv6             591144       0t0        TCP localhost:http-alt->localhost:57804 (ESTABLISHED)
+node      24866 24875        yves   16u     IPv6             589740       0t0        TCP localhost:http-alt->localhost:57800 (ESTABLISHED)
+node      24866 24875        yves   17u     IPv6             589741       0t0        TCP localhost:http-alt->localhost:57801 (ESTABLISHED)
+node      24866 24875        yves   18u     IPv6             589742       0t0        TCP localhost:http-alt->localhost:57802 (ESTABLISHED)
+node      24866 24875        yves   19u     IPv6             589743       0t0        TCP localhost:http-alt->localhost:57803 (ESTABLISHED)
