@@ -97,13 +97,14 @@ Module.register('MMM-Facial-Recognition',{
 			if (payload.user == -1){
 				this.current_user = this.translate("stranger")
 				this.current_user_id = payload.user;
+				this.sendNotification("STRANGE_CAME")
 			}
 			else{
 				this.current_user = this.config.users[payload.user];
 				this.current_user_id = payload.user;
 				this.login_user()
+				this.sendNotification("EMPLOYEE_CAME")
 			}
-
 			if (this.config.welcomeMessage) {
 				selected_message = Math.ceil(Math.random() * 3)
 				Log.log("WELCOME RAND: " + selected_message);

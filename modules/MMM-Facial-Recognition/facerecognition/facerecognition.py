@@ -35,6 +35,7 @@ def to_node(type, message):
 
 to_node("status", "Facerecognition started...")
 
+user_change_count = 0
 pre_found_face = -1
 face_identified_count = 0
 face_not_identified_count = 0
@@ -157,7 +158,14 @@ while True:
             else:
                 # eh o mesmo usuario?
                 if current_user != label:
-                    to_node("status", "######## troca de user ############ label: " + str(label) + " current_user: " + str(current_user))
+                    to_node("status", "troca de user user_change_count: " + str(user_change_count) + " label: " + str(label) + " current_user: " + str(current_user))
+                    if user_change_count == 0:
+                        user_change_count = 1
+                    else:
+                        if pre_found_face == label:
+                            to_node("logout", {"user": current_user})
+                            to_node("login", {"user": label, "confidence": str(confidence)})
+                            current_user = label
             # # Set login time
             # login_timestamp = time.time()
             # # Routine to count how many times the same user is detected
