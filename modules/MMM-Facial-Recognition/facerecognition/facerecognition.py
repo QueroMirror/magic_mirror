@@ -119,7 +119,7 @@ while True:
             face_not_identified_count = 0
             face_found_count = 0
             face_not_found_count = face_not_found_count + 1
-            to_node("status", "NOT_FOUND: " + str(face_not_found_count) )
+            to_node("status", "NOT_FOUND: " + str(face_not_found_count) + " current_user: " + str(current_user)) 
             # 1 amostragem por segundo, 5 amostragens sem achar ninguem, desloga
             if (current_user is not None and face_not_found_count > 4 and current_user != 0):
             # if last detection exceeds timeout and there is someone logged in -> logout!
@@ -130,7 +130,7 @@ while True:
                 current_user = None
             continue
         # Set x,y coordinates, height and width from face detection result
-        to_node("status", "FOUND: " + str(face_found_count) )
+        to_node("status", "FOUND: " + str(face_found_count) + " current_user: " + str(current_user))
         face_not_found_count = 0
         face_found_count = face_found_count + 1
         x, y, w, h = result
@@ -149,7 +149,7 @@ while True:
             face_identified_count = face_identified_count + 1
             # LOGICA RUIM! NAO IDENTIFICA DIREITO!
             # identificou, ja tinha login setado?
-            if (current_user is None):
+            if (current_user is None or current_user == 0):
                 # pode mandar login ja?
                     # e se o current eh strange? 0 
 
