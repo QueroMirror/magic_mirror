@@ -119,6 +119,7 @@ var config = {
 		},
 		{
 			module: "portugues/cumprimento",
+			classes: "default everyone",
 			position: "top_left"
 		},
 	]
