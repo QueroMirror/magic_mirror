@@ -110,6 +110,7 @@ Module.register('MMM-Facial-Recognition',{
 					selected_message = Math.ceil(Math.random() * 3)
 					Log.log("WELCOME RAND: " + selected_message);
 					this.sendNotification("SHOW_ALERT", {type: "notification", message: this.translate("hello_message_" + selected_message).replace("%person", this.current_user)});
+					this.sendNotification("SHOW_ALERT", {type: "notification", message: "Gostaria de falar com alguém?" } );
 				}
 			}
 		}

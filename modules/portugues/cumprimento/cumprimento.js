@@ -62,8 +62,7 @@ Module.register("cumprimento",{
       if (notification == "STRANGE_CAME") {
         if (responsiveVoice) {
             this.state = 2;
-            responsiveVoice.speak( "Olá visitante, bem vindo a quero educação");
-            responsiveVoice.speak( "Gostaria de falar com alguma pessoa");
+            responsiveVoice.speak( "Olá visitante, bem vindo a quero educação. Gostaria de falar com alguém?");
         }
       }
     }

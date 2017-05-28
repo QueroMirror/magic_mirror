@@ -121,7 +121,7 @@ while True:
             face_not_found_count = face_not_found_count + 1
             to_node("status", "NOT_FOUND: " + str(face_not_found_count) )
             # 1 amostragem por segundo, 5 amostragens sem achar ninguem, desloga
-            if (current_user is not None and face_not_found_count > 4):
+            if (current_user is not None and face_not_found_count > 4 and current_user != 0):
             # if last detection exceeds timeout and there is someone logged in -> logout!
             # if (current_user is not None and time.time() - login_timestamp > config.get("logoutDelay")):
                 # callback logout to node helper
@@ -151,8 +151,11 @@ while True:
             # identificou, ja tinha login setado?
             if (current_user is None):
                 # pode mandar login ja?
+                    # e se o current eh strange? 0 
+
                 if face_identified_count > 1:
                     if pre_found_face == label:    
+                        to_node("status", "pre_found_face: " + str(pre_found_face) + " label: " + str(label))
                         to_node("login", {"user": label, "confidence": str(confidence)})
                         current_user = label
             else:
@@ -189,15 +192,15 @@ while True:
             face_identified_count = 0
             face_not_identified_count = face_not_identified_count + 1
             if current_user is None:
-                # ja tem estranho logado?
                 if face_not_identified_count > 3:
                     current_user = 0
                     to_node("login", {"user": 0, "confidence": None})
             else:
                 # ja tem usuario logado, esta em tempo de deslogar ele?
                 if face_not_identified_count > 4:
-                    to_node("logout", {"user": current_user})
-                    current_user = None
+                    if current_user != 0:
+                        to_node("logout", {"user": current_user})
+                        current_user = None
         # elif (current_user != 0 and time.time() - login_timestamp > 5):
         #     # Set login time
         #     login_timestamp = time.time()
