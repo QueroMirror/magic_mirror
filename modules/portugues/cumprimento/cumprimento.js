@@ -40,7 +40,7 @@ Module.register("cumprimento",{
 
   start: function() {
     // var self = this;
-    this.state == 0;
+    this.state = 0;
     Log.info("Module name: " + this.name);
   },
 
@@ -78,6 +78,8 @@ Module.register("cumprimento",{
       }
     }
     if (this.state == 2 || this.state == 3) {
+      Log.info("NOTIFICATION ESTADOS OU 3");
+
       if (notification == "VOICE_COMMAND_RICARDO") {
         responsiveVoice.speak( "Ok, vou procurar o Ricardo e avisar que você está aqui.");
         this.state = 0;
