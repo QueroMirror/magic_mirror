@@ -15,10 +15,10 @@ var config = {
     {
         module: 'MMM-Hello-Mirror',
         position: 'lower_third',
-	debugging: true,
+        debugging: true,
         config: {
             // See 'Configuration options' for more information.
-           language: "en",
+           language: "pt_br",
            voice: "US English Female",
         }
     },
